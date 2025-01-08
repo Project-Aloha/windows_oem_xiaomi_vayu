@@ -1,10 +1,10 @@
 [Version]
 Signature   = "$WINDOWS NT$"
-Class       = System
-ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
+Class       = Media
+ClassGuid   = {4d36e96c-e325-11ce-bfc1-08002be10318}
 Provider    = %ManufacturerName%
 CatalogFile = tas2562_win.cat
-DriverVer = 09/02/2024,1.48.51.341
+DriverVer = 01/08/2025,5.41.20.705
 PnpLockdown = 1
 
 [DestinationDirs]
@@ -52,7 +52,7 @@ KmdfLibraryVersion = 1.15
 
 [Strings]
 SPSVCINST_ASSOCSERVICE = 0x00000002
-ManufacturerName = "WoA-Miaoll"
+ManufacturerName = "WoA-Miatoll"
 DiskName = "Ti TAS2562 Installation Disk"
 tas2562_win.DeviceDesc = "Ti TAS2562 Device"
 tas2562_win.SVCDESC = "Ti TAS2562 Service"
