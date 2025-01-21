@@ -4,9 +4,9 @@
 ![POCO X3 Pro Windows](https://github.com/user-attachments/assets/355e74cd-dea9-460f-8db4-87f766cd3223)
 
 This repository contains driver binary files for Poco X3 Pro based on MTP855 drivers.
-All driver binary files form a board support package to be used on Poco X3 Pro devices to provide hardware support for the Windows operating system.
+All driver binary files form a board support package to be used on Poco X3 Pro to provide hardware support for the Windows operating system.
 
-These driver files are not perfect, typos may exist, feel free to file an issue on GitHub in case you found any. These driver files are based on @gus33000 's drivers for Surface Duo. Huge thanks to @gus33000!
+These driver files are not perfect, typos may exist, feel free to file an issue on GitHub in case you found any. These driver files are based on @gus33000 's drivers for MTP855. Huge thanks to @gus33000!
 
 ## Resources
 
@@ -21,7 +21,7 @@ Please see [LICENSE](LICENSE.md)
 For preserving charset encoding, please checkout with using:
 
 ```
-git clone -c core.autocrlf=false https://github.com/woa-vayu/POCOX3Pro-Drivers
+git clone -c core.autocrlf=false https://github.com/Project-Aloha/windows_oem_xiaomi_vayu
 ```
 
 ---
