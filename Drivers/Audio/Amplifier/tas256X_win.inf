@@ -1,10 +1,10 @@
 [Version]
 Signature   = "$WINDOWS NT$"
-Class       = System
-ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318}
+Class       = Media
+ClassGuid   = {4d36e96c-e325-11ce-bfc1-08002be10318}
 Provider    = %ManufacturerName%
-CatalogFile = AudFilter.cat
-DriverVer = 02/05/2025,17.45.42.258
+CatalogFile = tas256X_win.cat
+DriverVer = 02/05/2025,17.45.42.321
 PnpLockdown = 1
 
 [DestinationDirs]
@@ -14,7 +14,7 @@ DefaultDestDir = 13
 1 = %DiskName%,,,""
 
 [SourceDisksFiles]
-AudFilter.sys  = 1,,
+tas256X_win.sys  = 1,,
 
 ;*****************************************
 ; Install Section
@@ -24,35 +24,35 @@ AudFilter.sys  = 1,,
 %ManufacturerName% = Standard,NTARM64.10.0...16299 ; %13% support introduced in build 16299
 
 [Standard.NTARM64.10.0...16299]
-%AudFilter.DeviceDesc% = AudFilter_Device, ACPI\AFLT0001
+%tas256X_win.DeviceDesc% = tas256X_win_Device, ACPI\TAS256X
 
-[AudFilter_Device.NT]
+[tas256X_win_Device.NT]
 CopyFiles = File_Copy
 
 [File_Copy]
-AudFilter.sys
+tas256X_win.sys
 
 ;-------------- Service installation
-[AudFilter_Device.NT.Services]
-AddService = AudFilter,%SPSVCINST_ASSOCSERVICE%, AudFilter_Service_Inst
+[tas256X_win_Device.NT.Services]
+AddService = tas256X_win,%SPSVCINST_ASSOCSERVICE%, tas256X_win_Service_Inst
 
-; -------------- AudFilter driver install sections
-[AudFilter_Service_Inst]
-DisplayName    = %AudFilter.SVCDESC%
+; -------------- tas256X_win driver install sections
+[tas256X_win_Service_Inst]
+DisplayName    = %tas256X_win.SVCDESC%
 ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
 StartType      = 3               ; SERVICE_DEMAND_START
 ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
-ServiceBinary  = %13%\AudFilter.sys
+ServiceBinary  = %13%\tas256X_win.sys
 
-[AudFilter_Device.NT.Wdf]
-KmdfService = AudFilter, AudFilter_wdfsect
+[tas256X_win_Device.NT.Wdf]
+KmdfService = tas256X_win, tas256X_win_wdfsect
 
-[AudFilter_wdfsect]
+[tas256X_win_wdfsect]
 KmdfLibraryVersion = 1.15
 
 [Strings]
 SPSVCINST_ASSOCSERVICE = 0x00000002
 ManufacturerName = "Nikroks & Remtrik"
-DiskName = "AudFilter Installation Disk"
-AudFilter.DeviceDesc = "AudFilter Device"
-AudFilter.SVCDESC = "AudFilter Service"
+DiskName = "Texas Instruments TAS256X Audio Amplifier Installation Disk"
+tas256X_win.DeviceDesc = "Ti TAS256X Audio Amplifier Device"
+tas256X_win.SVCDESC = "Ti TAS256X Service"
