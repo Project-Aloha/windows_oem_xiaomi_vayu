@@ -39,8 +39,6 @@
       </FirstLogonCommands>
       <Themes>
         <ThemeName>Xiaomi</ThemeName>
-		    <UWPAppsUseLightTheme>false</UWPAppsUseLightTheme>
-		    <SystemUsesLightTheme>false</SystemUsesLightTheme>
         <DesktopBackground>%WINDIR%\web\wallpaper\oem\Xiaomi\Xiaomi_Mi_Notebook_Pro_14.jpg</DesktopBackground>
       </Themes>
     </component>
